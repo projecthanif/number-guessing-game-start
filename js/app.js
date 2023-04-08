@@ -3,7 +3,7 @@ let range = document.querySelector("button");
 
 let rangeDisplay = document.querySelector("h5");
 
-let guessDisplay = document.querySelector("p");
+let guessDisplay = document.getElementById("guess");
 
 range.addEventListener("click",rangeFunction);
 
