@@ -7,13 +7,12 @@ let guessDisplay = document.getElementById("guess");
 
 range.addEventListener("click",rangeFunction);
 
-function rangeFunction(number){
+function rangeFunction(){
   let getNumber = prompt("What is the range Number you choose");
   rangeDisplay.textContent = `The range you choose is ${getNumber}`;
 
-  number = getNumber;
-  let shuffle = Math.floor(Math.random() * 100) + 1;
-  let guess = prompt("What is the number you choose");
+  let shuffle = Math.floor(Math.random() * getNumber) + 1;
+  let guess = Number(prompt("What is the number you choose"));
 
   if(guess == shuffle){
     guessDisplay.textContent = `You Won this round : ${guess}`;
